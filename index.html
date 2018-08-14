@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Ubuntu+Mono:700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script src="node_modules/holderjs/holder.min.js"></script>
+    <title>ArronaGrid</title>
+</head>
+<body class="ag-layout-grid ag-Grid-xs ag-Grid-t">
+    <header class="header-main ag-layout-flex xs-flex-r xs-cross-Center xs-main-Justify">
+        <a class="name" href="#Home">
+            <h1>ArronaGrid</h1>
+        </a>
+        <a class="ag-button Descargar"  href="">Descargar</a>
+    </header>
+    <aside class="ag-layout-flex xs-flex-c">
+        <nav class="">
+            <ul class="ag-layout-flex xs-flex-c">
+                <li class=""><a href="#Instalacion">Instalacion</a></li>
+                <li class=""><a href="#Configuracion">Configuracion</a>
+                    <ul class="ag-layout-flex xs-flex-c">
+                        <li><a href="#Gulp">Gulp</a></li>
+                        <li><a href="#Variables">Variables</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="#Reset">Reset</a></li>
+                <li class=""><a href="#Layout">Layout</a>
+                    <ul class="ag-layout-flex xs-flex-c">
+                        <li><a href="#Breackpoints">Breackpoints</a></li>
+                        <li><a href="#MediaQuerys">Media Querys</a></li>
+                        <li><a href="#LayoutAG">Layout</a></li>
+                        <li><a href="#Container">Container</a></li>
+                        <li><a href="#MaxWidth">Max Width</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="#Buttons">Buttons</a>
+                    <ul class="ag-layout-flex xs-flex-c">
+                        <li><a href="#ButtonsAG">Buttons</a></li>
+                        <li><a href="#Raidus">Raidus</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="#Flexbox">Flexbox</a>
+                    <ul class="ag-layout-flex xs-flex-c">
+                        <li><a href="#Direccion">Direccion</a></li>
+                        <li><a href="#Wrap">Wrap</a></li>
+                        <li><a href="#Align">Align</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="#Grid">Grid</a>.
+                    <ul class="ag-layout-flex xs-flex-c">
+                        <li><a href="#GridAG">Grid</a></li>
+                        <li><a href="#Gap">Gap</a></li>
+                    </ul>                
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section class="ag-layout-flex xs-flex-c xs-cross-Center" id="Home">
+            <header class="banner ag-layout-flex xs-flex-c xs-axis-Center">
+                <h1>ArronaGrid</h1>
+                <p>V0.1.2</p>
+                <p>Libreria sass para la maquetacion de sitios web</p>
+            </header>
+            <section class="ag-layout-flex xs-flex-r xs-main-Justify buttons">
+                <a class="ag-button Descargar" href="">Descargar</a>
+                <a class="ag-button github" href="">GitHub</a>
+            </section>
+            <section class="descripcion ag-layout-flex xs-flex-r xs-flex-nw xs-axis-Center">
+                <div>
+                    <h2>¿Que es?</h2>
+                    <p>ArronaGrid es una libreria sass(con version css) para la maquetacion de sitios web</p>
+                </div>
+                <div>
+                    <h2>Solo Maquetacion</h2>
+                    <p>No añade colores,tipografias, ni ningun otro estilo visual</p>
+                </div>
+                <div>
+                    <h2>Lo Ultimo del estandar</h2>
+                    <p>ArronaGrid utiliza lo ultimo del estandar css</p>
+                </div>
+            </section>
+        </section>
+        <section class="ag-layout-flex xs-flex-c" id="Instalacion">
+            <header>
+                <h1>Instalacion</h1>
+            </header>
+            <article class="ag-layout-flex xs-flex-c">
+                <header>
+                    <h2>Desde GitHub</h2>
+                </header>
+                <section>
+                    <p>Descarge la version estable o clone el proyecto desde github</p>
+                    <pre>
+                            <code class="language-git">
+                                    git clone https://github.com/AndresArronaM/ArronaGrid.git
+                                </code>
+                    </pre>
+                </section>
+                <section>
+                    <header>
+                        <h3>Version sass</h3>
+                    </header>
+                    <p>importe el archivo ArronaGrid.scss a su proyecto</p>
+                    <pre>
+                            <code class="language-scss">
+                                    @import "arronagrid/ArronaGrid.css";
+                                </code>  
+                    </pre>                  
+                </section>
+                <section>
+                    <header>
+                        <h3>Version CSS</h3>
+                    </header>
+                    <P>Coloque el linken sus archivos html</P>
+                    <pre>
+                            <code class="language-markup">
+                                    &lt;link rel="stylesheet" href="arronagrid/css/ArronaGrid.css"&gt;
+                                </code>  
+                    </pre>                   
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c">
+                <header>
+                    <h2>Desde NPM</h2>
+                </header>
+                <section>
+                    <p>Ejecute este comando desde una terminal</p>
+                    <pre>
+                            <code class="language-javascript">
+                                    npm install --save @andresarronamontoya/arronagrid
+                                </code>
+                    </pre>
+                </section>
+                <section>
+                    <header>
+                        <h3>Version sass</h3>
+                    </header>
+                    <p>importe el archivo ArronaGrid.scss a su proyecto</p>
+                    <pre>
+                            <code class="language-scss">
+                                    @import "node_modules/@andresarronamontoya/arronagrid/ArronaGrid.scss";
+                                </code>  
+                    </pre>                  
+                </section>
+                <section>
+                    <header>
+                        <h3>Version CSS</h3>
+                    </header>
+                    <P>Coloque el linken sus archivos html</P>
+                    <pre>
+                            <code class="language-markup">
+                                    &lt;link rel="stylesheet" href="node_modules/@andresarronamontoya/arronagrid/css/ArronaGrid.css"&gt;
+                                </code>  
+                    </pre>                   
+                </section>
+            </article>
+        </section>
+        <section class="ag-layout-flex xs-flex-c" id="Configuracion">
+            <header>
+                <h1>Configuracion</h1>
+            </header>
+            <article class="ag-layout-flex xs-flex-c" id="Gulp">
+                <header>
+                    <h2>Gulp</h2>
+                </header>
+                <section>
+                    <header>
+                        <h3>Configuracion de Gulp</h3>
+                    </header>
+                    <div>
+                        <p>Crear el archivo gulpfile.js</p>
+                        <p>E importar el proyecto</p>
+                        <pre>
+                            <code class="language-javascript">const gulp = requiere('gulp');
+                       const sass = requiere('gulp-sass');
+                       const arronagrid = "node_modules/@andresarronamontoya/arronagrid";
+
+                       gulp.task('styles', ()=>{
+                            gulp.src('./Style.scss')
+                            .pipe(sass({includePaths: [arronagrid]}))
+                            .pipe(gulp.dest('./css'))
+                       });
+                            </code>
+                        </pre>
+                        <p>Puede complementar esta configuracion de gulp con otros paquetes de NPM</p>
+                        <p>Recomendaciones</p>
+                        <div class="ag-layout-flex xs-flex-c">
+                            <p>autoprefixer Para colocar los prefijos a las propiedades no soportadas por algunos navegadores</p>
+                            <p>cssnano Para minificar los estilos</p>
+                            <i>Nota 1:autoprefixer necesita otro paquete de NPM para funcionar y es Autoprefixer-Core</i>
+                            <i>Nota 2:estos paquetes son plugins de PostCss para poder usarse es nesesario instalar el paquete gulp-postcss</i>
+                        </div>
+                        <p>browser-sync Genera un servidor local de archivos desde NodeJs</p>
+                        <p>gulp-plumber Para cachear errores y que no se interrumpa las tareas de gulp</p>
+                        <p>gulp-sourcemaps</p>
+                        <p>gulp-watch Para observar nuevos archivos</p>
+                        <p>holderjs Para generar imagenes de maquetacion</p> 
+                    </div>
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c" id="Variables">
+                <header>
+                    <h2>Variables</h2>
+                </header>
+                <section>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Descripcion</th>
+                                <th>Valores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>$Core</th>
+                                <th>Compila los mixins correspondientes para cada version</th>
+                                <th>
+                                    <p>sass</p>
+                                    <p>css</p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>$Version</th>
+                                <th>Determina que caracteristicas de css se usaran </th>
+                                <th>
+                                    all
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>$NameSpace</td>
+                                <th>La marca de ArronaGrid para diferenciarse de otros framework o librerias</td>
+                                <th>
+                                    <p>ag</p>
+                                    <i>Acepta cualquier valor</i>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>$Container</td>
+                                <th>Variable para definir el nombre que tendra los container</td>
+                                <th>
+                                    <p>#{$nameSpace}-container</p>
+                                    <i>Acepta cualquier valor</i>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>$Item</td>
+                                <th>Variable para definir el nombre que tendra los items</td>
+                                <th>
+                                    <p>#{$nameSpace}-item</p>
+                                    <i>Acepta cualquier valor</i>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>$Grap</td>
+                                <th>Separacion entre los items</td>
+                                <th>
+                                    <p>1rem</p>
+                                    <i>Acepta cualquier valor numerico</i>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+        </section>
+        <section class="ag-layout-flex xs-flex-c" id="Reset">
+            <header>
+                <h1>Reset</h1>
+            </header>
+            <article class="ag-layout-flex xs-flex-c">
+                <pre class="language-css">
+                    <code>*,*:before,*:after{
+                        box-sizing:border-box;
+                        margin: 0;
+                        text-size-adjust:100%;
+                        overflow-y: hidden;
+                    }
+                                
+                    img{
+                        min-width: 100%;
+                        height: auto;
+                    }
+                                    
+                    a{
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }    
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <section class="ag-layout-flex xs-flex-c" id="Layout">
+            <header>
+                <h1>Layout</h1>
+            </header>
+            <article class="ag-layout-flex xs-flex-c" id="Breackpoints">
+                <header>
+                    <h2>Breackpoints</h2>
+                </header>
+                <section>
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <p>ArronaGrid cuenta con distintos breackpoints para cualquier nesesidad de tu proyecto</p>
+                    <p>Puedes modificar este mapa de valores agregando o eliminado breackpoints</p>
+                    <pre>
+                        <code class="language-scss">$Breackpoints : (
+                            xs: 240px,
+                            s:  320px,
+                            m:  480px,
+                            st: 600px,
+                            t:  768px,
+                            l:  1024px,
+                            xl: 1200px
+                        )   !default;
+                        </code>
+                    </pre>
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c" id="MediaQuerys">
+                <header>
+                    <h2>Media Querys</h2>
+                </header>
+                <section>
+                    <h3>Descripcion</h3>
+                    <p>Mixin para generar las media querys. Este mixin recibe el siguente parametro</p>
+                    <h3>Parametros</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Descripcion</th>
+                                <th>Valores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>$Breackpoint</th>
+                                <th>Paraible para determinar el breckpoint</th>
+                                <th>
+                                    <p>xs</p>
+                                    <p>s</p>
+                                    <p>m</p>
+                                    <p>st</p>
+                                    <p>t</p>
+                                    <p>l</p>
+                                    <p>xl</p>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c" id="LayoutAG">
+                <header>
+                    <h2>Layout</h2>
+                </header>
+                <h3>Descripcion</h3>
+                <p>Mixin para determinar el modelo de layout a usar</p>
+                <section>
+                    <h3>Parametros</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Descripcion</th>
+                                <th>Valores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>$Display</th>
+                                <th>Determina el modelo de layout a usar</th>
+                                <th>
+                                    <p>flex</p>
+                                    <p>grid</p>
+                                </th>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <article>
+                        <pre class="language-scss">
+                            <code> 
+                                .content{
+                                    @mixin Layout($Display);
+                                }                        
+                            </code>
+                        </pre>
+                        <p class="compila">Compila a</p>
+                        <pre class="language-css">
+                            <code> .content{
+                                display:-ms-flexbox;
+                                display:flex;
+                                -ms-flex-wrap:wrap;
+                                flex-wrap:wrap;
+                        }
+                                
+                        //O tambien compila a
+
+                        .content{
+                                display:-ms-grid;
+                                display:grid
+                        }                                
+                            </code>
+                         </pre>
+                    </article>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <article>
+                        <pre>
+                            <code class="language-markup">&lt;div class="ag-layout-flex"&gt; &lt;div&gt;
+                       &lt;div class="ag-layout-grid"&gt; &lt;div&gt;
+                            </code>
+                        </pre>
+                    </article>
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c" id="Container">
+                <header>
+                    <h2>Container</h2>
+                </header>
+                <h3>Descripcion</h3>
+                <p>Mixin para determinar el modelo de layout a usar</p>
+                <section>
+                    <h3>Parametros</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Descripcion</th>
+                                <th>Valores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>$Display</th>
+                                <th>Determina el modelo de layout a usar</th>
+                                <th>
+                                    <p>flex</p>
+                                    <p>grid</p>
+                                </th>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <article>
+                        <pre class="language-scss">
+                            <code> .container{
+                                @include container($Display);
+                            }                        
+                            </code>
+                        </pre>
+                        <p class="compila">Compila a</p>
+                        <pre class="language-css">
+                            <code> .container{
+                                max-width: 1200px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 100%;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -ms-flex-wrap: wrap;
+                                flex-wrap: wrap;
+                        }
+
+                        ///O tambien 
+                                    
+                        .container{
+                                max-width: 1200px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 100%;
+                                display: -ms-grid;
+                                display: grid;
+                        }                                    
+                            </code>
+                         </pre>
+                    </article>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <article>
+                        <pre class="language-markup">
+                            <code>&lt;div class="ag-container-flex"&gt; &lt;div&gt;
+                       &lt;div class="ag-container-grid"&gt; &lt;div&gt;
+                            </code>
+                        </pre>
+                    </article>
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c" id="MaxWidth">
+                <header>
+                    <h2>MaxWidth</h2>
+                </header>
+                <table>
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Descripcion</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>$Max-Width</th>
+                                <th>Determina tamaño maximo de un item o content</th>
+                                <th>1200px</th>
+                            </tr>
+                            <tr>
+                                <th>$FullLayout</th>
+                                <th>Determina tamaño maximo de un item o content en base al viewport</th>
+                                <th>100vh</th>
+                            </tr>
+                            <tr>
+                                <th>$Full</th>
+                                <th>Determina tamaño maximo de un content</th>
+                                <th>100%</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                <section>
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <pre class="language-scss">
+                        <code>.content{
+                            max-width:$Max-Width;
+                    }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <section>
+                        <header>
+                            <h5>Full</h5>
+                        </header>
+                        <section>
+                            <pre class="language-markup">
+                                <code>
+                                    &lt;div class="Full"&gt; &lt;/div&gt;     
+                                </code>
+                            </pre>
+                        </section>                        
+                    </section>
+                    <section>
+                        <header>
+                            <h5>Full-Layout</h5>
+                        </header>
+                        <section>
+                            <pre class="language-markup">
+                                <code>
+                                    &lt;div class="Full-Layout"&gt; &lt;/div&gt;     
+                                </code>
+                            </pre>
+                        </section>                        
+                    </section>                    
+                </section>
+            </article>
+        </section>
+        <section class="ag-layout-flex xs-flex-c" id="Buttons">
+            <header>
+                <h1>Buttons</h1>
+            </header>
+            <article class="ag-layout-flex xs-flex-c" id="ButtonsAG">
+                <header>
+                    <h2>Buttons</h2>
+                </header>
+                <section>
+                    <article>
+                        <header>
+                            <h3>Descripcion</h3>
+                        </header>
+                        <section>
+                            Mixin que le dan los estilos basico para un boton
+                        </section>                      
+                    </article>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Descripcion</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>$Gap</th>
+                                    <th>Variable que determina el  espacio entre los elementos</th>
+                                    <th>1rem</th>
+                                </tr>
+                            </tbody>
+                        </table>  
+                    <article>
+                            <header>
+                                    <h4 class="sass">sass</h4>
+                                </header>
+                        <pre class="language-scss">
+                            <code>.boton{
+                                @include button($Gap)
+                        }
+                            </code>
+                        </pre>
+                        <p class="compila">Compila a</p>
+                        <pre class="language-css">
+                            <code>.boton{
+                                display:inline-block;
+                                padding:.8em 1.4em;
+                                cursor:pointer;
+                                border:none;
+                                text-decoration:none;
+                                margin-right:1rem;
+                                margin-left:1rem;
+                        }
+                            </code>
+                        </pre>
+                    </article>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <pre class="language-markup">
+                        <code>
+                            &lt;div class="ag-button"&gt; &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c" id="Raidus">
+                <header>
+                    <h2>Raidus</h2>
+                </header>
+                <section>
+                    <h3>Descripcion</h3>    
+                        <p>Mixin para redondear los bordes de un ag-button.</p>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <article>
+                        <article>
+                            <pre class="language-scss">
+                                <code>.button{
+                                    @include button($Gap);
+                                    @include radius;
+                            }
+                                </code>
+                            </pre>
+                            <p class="compila">Compila a</p>
+                            <pre class="language-css">
+                                <code>.button{
+                                    display        : inline-block  ;
+                                    padding         : .8em 1.4em    ;
+                                    cursor          : pointer       ;
+                                    border          : none          ;
+                                    text-decoration : none          ;
+                                    margin-right    : 1rem          ;
+                                    margin-left     : 1rem          ;
+                                    border-radius   : 1rem          ;
+                            }
+                                </code>
+                            </pre>
+                        </article>
+                    </article>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <pre class="language-markup">
+                        <code>
+                            &lt;div class="ag-button ag-button-radius"&gt; &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>  
+            </article>            
+        </section>
+        <section class="ag-layout-flex xs-flex-c" id="Flexbox">
+            <header>
+                <h1>Flexbox</h1>
+            </header>
+            <article class="ag-layout-flex xs-flex-c" id="Direccion">
+                <header>
+                    <h2>Direccion</h2>
+                </header>
+                <div>
+                        <h3>Descripcion</h3>
+                        <p>Mixin para determinar la direccion de los items</p>
+                    </div>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Descripcion</th>
+                                    <th>Valores</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>$FlexDirection</th>
+                                    <th>Mapa de valores para el mixin Direccion()</th>
+                                    <th>
+                                        <p>c:column</p>
+                                        <p>cr:column-reverse</p>
+                                        <p>r:row</p>
+                                        <p>rr:row-reverse</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>$Direccion</th>
+                                    <th>Variable para optener un valor del mapa $FlexDirection</th>
+                                    <th>
+                                        <p>c:column</p>
+                                        <p>cr:column-reverse</p>
+                                        <p>r:row</p>
+                                        <p>rr:row-reverse</p>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>                    
+                <section>
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <pre class="language-css">
+                        <code>.container{
+                            @include direccion(c);
+                    }
+                        </code>
+                    </pre>
+                    <p class="compila">Compila a</p>
+                    <pre class="language-scss">
+                        <code>.container{
+                            -ms-flex-direction:column;
+                            flex-direction:column;
+                    }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <pre>
+                        <code class="language-markup">&lt;div class="xs-flex-c"&gt; 
+                            &lt;div class="items"&gt;
+                            &lt;div class="items"&gt;
+                            &lt;div class="items"&gt;                                                                
+                    &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+            </article>
+            <article class="ag-layout-flex xs-flex-c" id="Wrap">
+                <header>
+                    <h2>Wrap</h2>
+                </header>
+                <section>
+                    <section>
+                            <h3>Descripcion</h3>
+                            <p>Mixin para determinar si los items estaran en una linea o no</p>
+                    </section>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Variables</th>
+                                    <th>Descripcion</th>
+                                    <th>Valores</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>$FlexWrap</th>
+                                    <th>Mapa de variables para el mixin wrap()</th>
+                                    <th>
+                                        <P>w:wrap</P>
+                                        <P>wr:wrap-reverse</P>
+                                        <P>nw:nowrap</P>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>$Wrap</th>
+                                    <th>Variable para optener un valor del mapa $FlexWrap</th>
+                                    <th>
+                                        <P>w:wrap</P>
+                                        <P>wr:wrap-reverse</P>
+                                        <P>nw:nowrap</P>
+                                    </th>
+                                </tr>
+                            </tbody>
+                    </table>
+                    <article>
+                            <header>
+                                    <h4 class="sass">sass</h4>
+                                </header>
+                        <section>
+                            <pre class="language-scss">
+                                <code>.container{
+                                    @include wrap(w);
+                            }
+                                </code>
+                            </pre>
+                            <p class="compila">Compila a</p>
+                            <pre class="language-css">
+                                <code>.container{
+                                -ms-flex-wrap:wrap;
+                                flex-wrap:wrap;
+                            }
+                                </code>
+                            </pre>
+                        </section>
+                    </article>
+                </section>
+                <section>
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <pre class="language-markup">
+                        <code class="language-markup">&lt;div class="xs-flex-c xs-flex-w"&gt; 
+                            &lt;div class="items"&gt;
+                            &lt;div class="items"&gt;
+                            &lt;div class="items"&gt;                                                                
+                    &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+            </article>   
+            <!--article class="ag-layout-flex xs-flex-c" id="Align">
+                <header>
+                    <h2>Align</h2>
+                </header>
+                <section>
+                    <header>
+                        <h3>sass</h3>
+                    </header>
+                </section>
+                <section>
+                    <header>
+                        <h3>css</h3>
+                    </header>
+                </section>
+            </article-->
+            <article class="ag-layout-flex xs-flex-c" id="Align">
+                <header>
+                    <h2>Align</h2>
+                </header>
+                <section>
+                    <p>Lo siento</p>
+                    <p>Proximanete</p>
+                </section>
+            </article>                           
+        </section>
+        <section class="ag-layout-flex xs-flex-c" id="Grid">
+            <header>
+                <h1>Grid</h1>
+            </header>
+            <article class="ag-layout-flex xs-flex-c" id="GridAG">
+                <header>
+                    <h2>Grid</h2>
+                </header>
+                <div>
+                    <h3>Descrippcion</h3>
+                    <P>Mixin para la creacion de un sistema de rejillas</P>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>variable</th>
+                            <th>Descripcion</th>
+                            <th>valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Column</th>
+                            <th>Varible para determinar el numero de columnas</th>
+                            <th>12</th>
+                        </tr>    
+                    </tbody>
+                </table>
+                <section class="ag-layout-flex xs-flex-c">
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <pre>
+                        <code class="language-css">.container{
+                            @include gridStrict(12);
+                    }
+                        </code>
+                    </pre>
+                    <p class="compila">compila a</p>
+                    <pre>
+                        <code class="language-scss">.container{
+                            -ms-grid-columns: (1fr)[12];
+                            grid-template-columns: repeat(12, 1fr);
+                    }
+                        </code>
+                    </pre>
+                </section>
+                <section class="ag-layout-flex xs-flex-c">
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <pre>
+                        <code class="language-markup">&lt;div class="ag-container-grid ag-Grid-xs"&gt;
+                            &lt;div class="item"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+            </article>
+            <article  class="ag-layout-flex xs-flex-c" id="Gap">
+                <header>
+                    <h2>Gap</h2>
+                </header>
+                <div>
+                    <h3>Descripcion</h3>
+                    <p>Mixin para la separacion de los items en la rejilla</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Descripcion</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>$Gap</th>
+                            <th>Varialble para separar los items</th>
+                            <th>12</th>
+                        </tr>    
+                    </tbody>
+                </table>
+                <section class="ag-layout-flex xs-flex-c">
+                    <header>
+                        <h4 class="sass">sass</h4>
+                    </header>
+                    <pre class="language-scss">
+                        <code>.container{
+                        @include gap($Gap-Column,$Gap-Row);
+                    }
+                        </code>
+                    </pre>
+                    <p class="compila">compila a</p>
+                    <pre >
+                        <code class="language-css"> .container{
+                        grid-gap:1rem 1rem
+                    }
+                        </code>
+                    </pre>
+                </section>
+                <section class="ag-layout-flex xs-flex-c">
+                    <header>
+                        <h4 class="css">css</h4>
+                    </header>
+                    <pre class="language-markup">
+                        <code >&lt;div class="ag-container-grid ag-Grid-xs xs-gap"&gt;
+                            &lt;div class="item"&gt;&lt;/div&gt;
+                    &lt;/div&gt;</code>
+                    </pre>
+                </section>
+            </article>              
+        </section>
+    </main>
+    <footer class="ag-layout-flex xs-flex-c t-flex-nw">
+        <p>ArronaGrid Libreria sass para la maquetacion de sitios web</p>
+        <p>Andres Arrona Montoya 2018</p>
+    </footer>
+    <script src="js/prism.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

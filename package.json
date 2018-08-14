@@ -1,0 +1,38 @@
+{
+  "name": "arronagrid-page",
+  "version": "1.0.0",
+  "description": "Pagina oficial de ArronaGrid",
+  "main": "main.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresArronaM/ArronaGrid-Page.git"
+  },
+  "keywords": [
+    "ArronaGrid",
+    "Pagina Oficial"
+  ],
+  "author": "Andres Arrona Montoya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresArronaM/ArronaGrid-Page/issues"
+  },
+  "homepage": "https://github.com/AndresArronaM/ArronaGrid-Page#readme",
+  "dependencies": {
+    "@andresarronamontoya/arronagrid": "^0.1.2",
+    "autoprefixer": "^9.1.0",
+    "autoprefixer-core": "^6.0.1",
+    "browser-sync": "^2.24.6",
+    "cssnano": "^4.0.5",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.1",
+    "holderjs": "^2.9.4"
+  },
+  "devDependencies": {}
+}

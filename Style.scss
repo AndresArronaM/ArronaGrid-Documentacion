@@ -1,0 +1,212 @@
+@import "node_modules/@andresarronamontoya/arronagrid/ArronaGrid.scss";
+
+*,*:after,*:before{
+    padding: 0;
+    overflow-y:auto;
+}
+
+header{
+    width:100%;
+    overflow-x:none;
+}
+
+a{
+    font-size:1.3rem;
+    color:#ffffff;
+}
+
+h1,h2,h3{
+    margin-bottom:1rem;
+    padding-bottom:0.5rem;
+}
+
+h1{
+    font-size:3.2rem;
+    color:#E46767;
+    border-bottom:4px solid #B35A86;
+    padding-left:2rem;
+    margin:2.5rem 0;
+}
+
+h2{
+    font-size:2.67rem;
+    color:#B35A86;
+    padding-left:4rem;
+    margin:2rem 0;
+}
+
+h3{
+    font-size:2.14rem;
+    padding-left:6rem;
+    margin:1.5rem 0;
+}
+
+h4{
+    font-size:1.61rem;
+    padding-left:8rem;
+    margin:1rem 0;
+}
+
+h4[class="sass"]{
+    color:#CD6799;
+}
+
+h4[class="css"]{
+    color:#3C99DC;
+}
+
+h5{
+    font-size:1.18rem;
+    padding-left:10rem;
+    margin:0.5rem 0;
+}
+
+.header-main{
+    height:3rem;
+    background-color: #CD6799;
+    grid-column:1/2;
+    grid-row:1/2;
+
+    @media screen and (min-width:768px){
+        height: 4rem;
+        grid-column:2/9;
+        grid-row:1/2;
+    }
+
+    .Descargar{
+        background-color: #4D273A;
+    }
+}
+
+aside{
+    width:16.3%;
+    background-color: #343EE9;
+    height:100vh; 
+    position:fixed; 
+    @media screen and (min-width:768px){
+        grid-column:1/2;
+        grid-row:1/4;
+    }
+}
+
+main{
+    @media screen and (min-width:768px){
+        height: auto;
+        grid-column:2/9;
+        grid-row:2/3;
+    }
+}
+
+article{
+    margin:1rem 0;
+}
+
+p{
+    font-size:1.4rem;
+    margin:0.3rem 0;
+}
+
+i{
+    font-size:1rem;
+    margin:0.1rem 0;
+}
+
+p[class="compila"]{
+    font-size:1.6rem;
+    margin:1rem 0;
+}
+
+table{
+    width:1000px;
+    margin:1.2rem 0;
+}
+
+thead tr th{
+    color:#8D8D8D;
+    padding-bottom:1rem;
+    border-bottom:3px solid #8D8D8D;
+}
+
+th{
+    font-size:1.5em;
+    text-align: left;
+    padding:0.8rem 0;
+}
+
+code{
+    font-size:1rem;
+}
+
+footer{
+    background-color:#19405C;
+    color: #ffffff;
+    font-size:1.1em;
+    height:6rem;
+    text-align: center;
+    @media screen and (min-width:768px){
+        height: 4rem;
+        grid-column:2/9;
+        grid-row:3/4;
+    }
+
+    & p:nth-child(1){
+        margin: 0;
+        flex-basis:100%;
+        height:60%;
+    }
+
+    & p:nth-child(2){
+        margin: 0;
+        flex-basis:100%;
+        height:40%;
+        background-color: #4D273A;
+    }
+}
+
+.banner{
+    background-color:#19405C;
+    height:60vh;
+
+    & h1,& p{
+        color:#ffffff
+    }
+
+    & h1{
+        border-bottom:0px;
+    }
+}
+
+.buttons{
+    position: absolute;
+    top:58vh;
+}
+
+a.Descargar{
+    background-color: #CD6799;
+    text-decoration:none;
+}
+
+a.github{
+    background-color: #000000;
+    text-decoration:none;
+}
+
+.desripcion{
+    height:80vh;
+
+    & div{
+        height:100%;
+        flex-basis:33%;
+    }
+}
+
+.name h1{
+    margin: 0;
+    padding-bottom:0;
+    color:#ffffff;
+    border:0;
+}
+
+.name:hover{
+    text-decoration:none;
+}
