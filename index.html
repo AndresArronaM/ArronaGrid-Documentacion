@@ -12,12 +12,12 @@
 </head>
 <body class="ag-layout-grid ag-Grid-xs ag-Grid-t">
     <header class="header-main ag-layout-flex xs-flex-r xs-cross-Center xs-main-Justify">
-        <a class="name" href="#Home">
+        <a class="ag-layout-flex xs-axis-Center name" href="#Home">
             <h1>ArronaGrid</h1>
         </a>
         <a class="ag-button Descargar"  href="">Descargar</a>
     </header>
-    <aside class="ag-layout-flex xs-flex-c">
+    <aside class="ag-layout-flex xs-flex-c aside">
         <nav class="">
             <ul class="ag-layout-flex xs-flex-c">
                 <li class=""><a href="#Instalacion">Instalacion</a></li>
@@ -54,7 +54,7 @@
                     <ul class="ag-layout-flex xs-flex-c">
                         <li><a href="#GridAG">Grid</a></li>
                         <li><a href="#Gap">Gap</a></li>
-                    </ul>                
+                    </ul>
                 </li>
             </ul>
         </nav>
@@ -63,14 +63,14 @@
         <section class="ag-layout-flex xs-flex-c xs-cross-Center" id="Home">
             <header class="banner ag-layout-flex xs-flex-c xs-axis-Center">
                 <h1>ArronaGrid</h1>
-                <p>V0.1.2</p>
+                <p>V0.1.3</p>
                 <p>Libreria sass para la maquetacion de sitios web</p>
             </header>
-            <section class="ag-layout-flex xs-flex-r xs-main-Justify buttons">
+            <section class="ag-layout-flex xs-flex-r xs-main-Center t-main-Justify buttons">
                 <a class="ag-button Descargar" href="">Descargar</a>
                 <a class="ag-button github" href="">GitHub</a>
             </section>
-            <section class="descripcion ag-layout-flex xs-flex-r xs-flex-nw xs-axis-Center">
+            <section class="descripcion ag-layout-flex xs-flex-c t-flex-r xs-flex-nw xs-axis-Center">
                 <div>
                     <h2>¿Que es?</h2>
                     <p>ArronaGrid es una libreria sass(con version css) para la maquetacion de sitios web</p>
@@ -109,8 +109,8 @@
                     <pre>
                             <code class="language-scss">
                                     @import "arronagrid/ArronaGrid.css";
-                                </code>  
-                    </pre>                  
+                                </code>
+                    </pre>
                 </section>
                 <section>
                     <header>
@@ -120,8 +120,8 @@
                     <pre>
                             <code class="language-markup">
                                     &lt;link rel="stylesheet" href="arronagrid/css/ArronaGrid.css"&gt;
-                                </code>  
-                    </pre>                   
+                                </code>
+                    </pre>
                 </section>
             </article>
             <article class="ag-layout-flex xs-flex-c">
@@ -144,8 +144,8 @@
                     <pre>
                             <code class="language-scss">
                                     @import "node_modules/@andresarronamontoya/arronagrid/ArronaGrid.scss";
-                                </code>  
-                    </pre>                  
+                                </code>
+                    </pre>
                 </section>
                 <section>
                     <header>
@@ -155,8 +155,8 @@
                     <pre>
                             <code class="language-markup">
                                     &lt;link rel="stylesheet" href="node_modules/@andresarronamontoya/arronagrid/css/ArronaGrid.css"&gt;
-                                </code>  
-                    </pre>                   
+                                </code>
+                    </pre>
                 </section>
             </article>
         </section>
@@ -199,7 +199,7 @@
                         <p>gulp-plumber Para cachear errores y que no se interrumpa las tareas de gulp</p>
                         <p>gulp-sourcemaps</p>
                         <p>gulp-watch Para observar nuevos archivos</p>
-                        <p>holderjs Para generar imagenes de maquetacion</p> 
+                        <p>holderjs Para generar imagenes de maquetacion</p>
                     </div>
                 </section>
             </article>
@@ -281,18 +281,18 @@
                         text-size-adjust:100%;
                         overflow-y: hidden;
                     }
-                                
+
                     img{
                         min-width: 100%;
                         height: auto;
                     }
-                                    
+
                     a{
                         text-decoration: none;
                         &:hover{
                             text-decoration: underline;
                         }
-                    }    
+                    }
                     </code>
                 </pre>
             </article>
@@ -383,7 +383,7 @@
                                     <p>flex</p>
                                     <p>grid</p>
                                 </th>
-                            </tr> 
+                            </tr>
                         </tbody>
                     </table>
                 </section>
@@ -393,10 +393,10 @@
                     </header>
                     <article>
                         <pre class="language-scss">
-                            <code> 
+                            <code>
                                 .content{
                                     @mixin Layout($Display);
-                                }                        
+                                }
                             </code>
                         </pre>
                         <p class="compila">Compila a</p>
@@ -407,13 +407,13 @@
                                 -ms-flex-wrap:wrap;
                                 flex-wrap:wrap;
                         }
-                                
+
                         //O tambien compila a
 
                         .content{
                                 display:-ms-grid;
                                 display:grid
-                        }                                
+                        }
                             </code>
                          </pre>
                     </article>
@@ -455,7 +455,7 @@
                                     <p>flex</p>
                                     <p>grid</p>
                                 </th>
-                            </tr> 
+                            </tr>
                         </tbody>
                     </table>
                 </section>
@@ -467,7 +467,7 @@
                         <pre class="language-scss">
                             <code> .container{
                                 @include container($Display);
-                            }                        
+                            }
                             </code>
                         </pre>
                         <p class="compila">Compila a</p>
@@ -483,8 +483,8 @@
                                 flex-wrap: wrap;
                         }
 
-                        ///O tambien 
-                                    
+                        ///O tambien
+
                         .container{
                                 max-width: 1200px;
                                 margin-left: auto;
@@ -492,7 +492,7 @@
                                 width: 100%;
                                 display: -ms-grid;
                                 display: grid;
-                        }                                    
+                        }
                             </code>
                          </pre>
                     </article>
@@ -562,10 +562,10 @@
                         <section>
                             <pre class="language-markup">
                                 <code>
-                                    &lt;div class="Full"&gt; &lt;/div&gt;     
+                                    &lt;div class="Full"&gt; &lt;/div&gt;
                                 </code>
                             </pre>
-                        </section>                        
+                        </section>
                     </section>
                     <section>
                         <header>
@@ -574,11 +574,11 @@
                         <section>
                             <pre class="language-markup">
                                 <code>
-                                    &lt;div class="Full-Layout"&gt; &lt;/div&gt;     
+                                    &lt;div class="Full-Layout"&gt; &lt;/div&gt;
                                 </code>
                             </pre>
-                        </section>                        
-                    </section>                    
+                        </section>
+                    </section>
                 </section>
             </article>
         </section>
@@ -597,7 +597,7 @@
                         </header>
                         <section>
                             Mixin que le dan los estilos basico para un boton
-                        </section>                      
+                        </section>
                     </article>
                     <table>
                             <thead>
@@ -614,7 +614,7 @@
                                     <th>1rem</th>
                                 </tr>
                             </tbody>
-                        </table>  
+                        </table>
                     <article>
                             <header>
                                     <h4 class="sass">sass</h4>
@@ -656,7 +656,7 @@
                     <h2>Raidus</h2>
                 </header>
                 <section>
-                    <h3>Descripcion</h3>    
+                    <h3>Descripcion</h3>
                         <p>Mixin para redondear los bordes de un ag-button.</p>
                 </section>
                 <section>
@@ -698,8 +698,8 @@
                             &lt;div class="ag-button ag-button-radius"&gt; &lt;/div&gt;
                         </code>
                     </pre>
-                </section>  
-            </article>            
+                </section>
+            </article>
         </section>
         <section class="ag-layout-flex xs-flex-c" id="Flexbox">
             <header>
@@ -743,7 +743,7 @@
                                     </th>
                                 </tr>
                             </tbody>
-                        </table>                    
+                        </table>
                 <section>
                     <header>
                         <h4 class="sass">sass</h4>
@@ -768,10 +768,10 @@
                         <h4 class="css">css</h4>
                     </header>
                     <pre>
-                        <code class="language-markup">&lt;div class="xs-flex-c"&gt; 
+                        <code class="language-markup">&lt;div class="xs-flex-c"&gt;
                             &lt;div class="items"&gt;
                             &lt;div class="items"&gt;
-                            &lt;div class="items"&gt;                                                                
+                            &lt;div class="items"&gt;
                     &lt;/div&gt;
                         </code>
                     </pre>
@@ -842,15 +842,15 @@
                         <h4 class="css">css</h4>
                     </header>
                     <pre class="language-markup">
-                        <code class="language-markup">&lt;div class="xs-flex-c xs-flex-w"&gt; 
+                        <code class="language-markup">&lt;div class="xs-flex-c xs-flex-w"&gt;
                             &lt;div class="items"&gt;
                             &lt;div class="items"&gt;
-                            &lt;div class="items"&gt;                                                                
+                            &lt;div class="items"&gt;
                     &lt;/div&gt;
                         </code>
                     </pre>
                 </section>
-            </article>   
+            </article>
             <!--article class="ag-layout-flex xs-flex-c" id="Align">
                 <header>
                     <h2>Align</h2>
@@ -874,7 +874,7 @@
                     <p>Lo siento</p>
                     <p>Proximanete</p>
                 </section>
-            </article>                           
+            </article>
         </section>
         <section class="ag-layout-flex xs-flex-c" id="Grid">
             <header>
@@ -901,7 +901,7 @@
                             <th>Column</th>
                             <th>Varible para determinar el numero de columnas</th>
                             <th>12</th>
-                        </tr>    
+                        </tr>
                     </tbody>
                 </table>
                 <section class="ag-layout-flex xs-flex-c">
@@ -956,7 +956,7 @@
                             <th>$Gap</th>
                             <th>Varialble para separar los items</th>
                             <th>12</th>
-                        </tr>    
+                        </tr>
                     </tbody>
                 </table>
                 <section class="ag-layout-flex xs-flex-c">
@@ -987,10 +987,10 @@
                     &lt;/div&gt;</code>
                     </pre>
                 </section>
-            </article>              
+            </article>
         </section>
     </main>
-    <footer class="ag-layout-flex xs-flex-c t-flex-nw">
+    <footer class="ag-layout-flex xs-flex-c xs-flex-nw">
         <p>ArronaGrid Libreria sass para la maquetacion de sitios web</p>
         <p>Andres Arrona Montoya 2018</p>
     </footer>

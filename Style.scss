@@ -1,3 +1,4 @@
+$Core:css;
 @import "node_modules/@andresarronamontoya/arronagrid/ArronaGrid.scss";
 
 *,*:after,*:before{
@@ -20,31 +21,47 @@ h1,h2,h3{
     padding-bottom:0.5rem;
 }
 
+h1,h2,h3,h4,h5{
+    padding-left:0;
+}
+
 h1{
-    font-size:3.2rem;
+    font-size:2.5rem;
     color:#E46767;
     border-bottom:4px solid #B35A86;
-    padding-left:2rem;
     margin:2.5rem 0;
+    @media screen and (min-width:768px){
+        padding-left:2rem;
+        font-size:3.2rem;
+    }
 }
 
 h2{
-    font-size:2.67rem;
+    font-size:1.97rem;
     color:#B35A86;
-    padding-left:4rem;
     margin:2rem 0;
+    @media screen and (min-width:768px){
+        padding-left:4rem;
+        font-size:2.67rem;
+    }
 }
 
 h3{
-    font-size:2.14rem;
-    padding-left:6rem;
+    font-size:1.44rem;
     margin:1.5rem 0;
+    @media screen and (min-width:768px){
+        padding-left:6rem;
+        font-size:2.14rem;
+    }
 }
 
 h4{
-    font-size:1.61rem;
-    padding-left:8rem;
+    font-size:.91rem;
     margin:1rem 0;
+    @media screen and (min-width:768px){
+        padding-left:8rem;
+        font-size:1.61rem;
+    }
 }
 
 h4[class="sass"]{
@@ -56,9 +73,12 @@ h4[class="css"]{
 }
 
 h5{
-    font-size:1.18rem;
-    padding-left:10rem;
+    font-size:.48rem;
     margin:0.5rem 0;
+    @media screen and (min-width:768px){
+        font-size:1.18rem;
+        padding-left:10rem;
+    }
 }
 
 .header-main{
@@ -75,21 +95,32 @@ h5{
 
     .Descargar{
         background-color: #4D273A;
+        display: none;
+        @media screen and (min-width:768px){
+            display: inline-block;
+        }
     }
 }
 
-aside{
-    width:16.3%;
+.aside{
+    display: none;
+    width:60%;
     background-color: #343EE9;
-    height:100vh; 
-    position:fixed; 
+    height:100vh;
+    position:fixed;
+    top:3rem;
+    z-index:10;
     @media screen and (min-width:768px){
+        display: block;
+        width:12.5%;
         grid-column:1/2;
         grid-row:1/4;
+        top:0;
     }
 }
 
 main{
+    height: auto;
     @media screen and (min-width:768px){
         height: auto;
         grid-column:2/9;
@@ -102,23 +133,35 @@ article{
 }
 
 p{
-    font-size:1.4rem;
+    font-size:1em;
     margin:0.3rem 0;
+    @media screen and (min-width:768px){
+        font-size:1.4rem;
+    }
 }
 
 i{
-    font-size:1rem;
+    font-size:0.7em;
     margin:0.1rem 0;
+    @media screen and (min-width:768px){
+        font-size:1rem;
+    }
 }
 
 p[class="compila"]{
-    font-size:1.6rem;
+    font-size:1rem;
     margin:1rem 0;
+    @media screen and (min-width:768px){
+        font-size:1.6rem;
+    }
 }
 
 table{
-    width:1000px;
+    width: 100%;
     margin:1.2rem 0;
+    @media screen and (min-width:768px){
+        width:1000px;
+    }
 }
 
 thead tr th{
@@ -128,9 +171,12 @@ thead tr th{
 }
 
 th{
-    font-size:1.5em;
+    font-size:0.7em;
     text-align: left;
     padding:0.8rem 0;
+    @media screen and (min-width:768px){
+        font-size:1.5em;
+    }
 }
 
 code{
@@ -140,8 +186,7 @@ code{
 footer{
     background-color:#19405C;
     color: #ffffff;
-    font-size:1.1em;
-    height:6rem;
+    height:14rem;
     text-align: center;
     @media screen and (min-width:768px){
         height: 4rem;
@@ -150,63 +195,114 @@ footer{
     }
 
     & p:nth-child(1){
+        font-size:1.5rem;
         margin: 0;
         flex-basis:100%;
-        height:60%;
+        height:auto;
     }
 
     & p:nth-child(2){
+        font-size:1.5rem;
         margin: 0;
         flex-basis:100%;
-        height:40%;
+        height:auto;
         background-color: #4D273A;
     }
 }
 
 .banner{
     background-color:#19405C;
-    height:60vh;
+    height:100vh;
 
     & h1,& p{
         color:#ffffff
     }
 
     & h1{
+        font-size:2.2rem;
         border-bottom:0px;
+        padding-left:0;
+        @media screen and (min-width:768px){
+            font-size:3.2rem;
+        }
+    }
+
+    @media screen and (min-width:768px){
+        height:60vh;
     }
 }
 
 .buttons{
     position: absolute;
-    top:58vh;
+    top:80vh;
+    @media screen and (min-width:768px){
+        top:58vh;
+    }
 }
 
 a.Descargar{
+    width:96%;
+    text-align: center;
     background-color: #CD6799;
     text-decoration:none;
+    @media screen and (min-width:768px){
+        width:250px;
+    }
 }
 
 a.github{
+    width:96%;
+    text-align: center;
     background-color: #000000;
     text-decoration:none;
+    @media screen and (min-width:768px){
+        width:250px;
+    }
 }
 
-.desripcion{
-    height:80vh;
-
+.descripcion{
+    width:100%;
+    height:auto;
+    @media screen and (min-width:768px){
+        height:35vh;
+    }
     & div{
-        height:100%;
-        flex-basis:33%;
+        height:auto;
+        @media screen and (min-width:768px){
+            flex-basis:33%;
+        }
+
+        & h2{
+            font-size:2rem;
+            padding-left:0;
+
+            @media screen and (min-width:768px){
+                font-size:2.67rem;
+            }
+        }
     }
 }
 
 .name h1{
     margin: 0;
     padding-bottom:0;
+    text-align:center;
     color:#ffffff;
     border:0;
+    font-size:2.5rem;
+    @media screen and (min-width:240px){
+        padding-left:0;
+    }
 }
 
 .name:hover{
     text-decoration:none;
+}
+
+section{
+    height:auto;
+}
+
+article{
+    height:auto;
 }
