@@ -8,6 +8,8 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const watch = require('gulp-watch');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 
 const server = browsersync.create();
 
@@ -29,6 +31,16 @@ gulp.task('styles', ()=>{
     .pipe(server.stream({match: '**/*.css'}))
 });
 
+gulp.task('ES6', ()=>{
+    return gulp.src("Main.js")
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(plumber())
+    .pipe(babel())
+    .pipe(concat("Main.js"))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./js'))
+});
+
 gulp.task('default', ['styles'], ()=>{
     server.init({
         watch:true,
@@ -38,8 +50,8 @@ gulp.task('default', ['styles'], ()=>{
     },);
 
     gulp.watch('./*.html').on('change', server.reload);
-
     watch('./*.scss', () => gulp.start('styles'));
+    watch('./*.js', ()=>gulp.start('ES6'));
 });
 
 

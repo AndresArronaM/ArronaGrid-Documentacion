@@ -102,6 +102,12 @@ h5{
     }
 }
 
+.icono{
+    color:#ffffff;
+    font-size:2rem;
+    margin-left:0.9rem;
+}
+
 .aside{
     display: none;
     width:60%;
@@ -125,6 +131,21 @@ main{
         height: auto;
         grid-column:2/9;
         grid-row:2/3;
+    }
+}
+
+.icon-menu{
+    display: block;
+    @media screen and (min-width:768px){
+        display: none;
+    }
+}
+
+.icon-arrow-right2{
+    transform: rotate(180deg);
+    display: none;
+    @media screen and (min-width:768px){
+        display: block;
     }
 }
 
@@ -284,12 +305,12 @@ a.github{
 }
 
 .name h1{
-    margin: 0;
+    margin:0 0.9rem 0 0.5rem;
     padding-bottom:0;
     text-align:center;
     color:#ffffff;
     border:0;
-    font-size:2.5rem;
+    font-size:2rem;
     @media screen and (min-width:240px){
         padding-left:0;
     }
