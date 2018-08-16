@@ -1,6 +1,19 @@
 $Core:css;
 @import "node_modules/@andresarronamontoya/arronagrid/ArronaGrid.scss";
 
+:root{
+    --color1:#ffffff;
+    --color2:#E46767;
+    --color3:#B35A86;
+    --color4:#CD6799;
+    --color5:#3C99DC;
+    --color6:#4D273A;
+    --color7:#343EE9;
+    --color8:#8D8D8D;
+    --color9:#19405C;
+    --color10:#000000;
+}
+
 *,*:after,*:before{
     padding: 0;
     overflow-y:auto;
@@ -8,12 +21,11 @@ $Core:css;
 
 header{
     width:100%;
-    overflow-x:none;
 }
 
 a{
     font-size:1.3rem;
-    color:#ffffff;
+    color:var(--color1);
 }
 
 h1,h2,h3{
@@ -27,8 +39,8 @@ h1,h2,h3,h4,h5{
 
 h1{
     font-size:2.5rem;
-    color:#E46767;
-    border-bottom:4px solid #B35A86;
+    color:var(--color2);
+    border-bottom:4px solid var(--color3);
     margin:2.5rem 0;
     @media screen and (min-width:768px){
         padding-left:2rem;
@@ -38,7 +50,7 @@ h1{
 
 h2{
     font-size:1.97rem;
-    color:#B35A86;
+    color:var(--color3);
     margin:2rem 0;
     @media screen and (min-width:768px){
         padding-left:4rem;
@@ -65,11 +77,11 @@ h4{
 }
 
 h4[class="sass"]{
-    color:#CD6799;
+    color:var(--color4);
 }
 
 h4[class="css"]{
-    color:#3C99DC;
+    color:var(--color5);
 }
 
 h5{
@@ -83,7 +95,7 @@ h5{
 
 .header-main{
     height:3rem;
-    background-color: #CD6799;
+    background-color: var(--color4);
     grid-column:1/2;
     grid-row:1/2;
 
@@ -94,7 +106,7 @@ h5{
     }
 
     .Descargar{
-        background-color: #4D273A;
+        background-color: var(--color6);
         display: none;
         @media screen and (min-width:768px){
             display: inline-block;
@@ -103,15 +115,15 @@ h5{
 }
 
 .icono{
-    color:#ffffff;
+    color:var(--color1);
     font-size:2rem;
     margin-left:0.9rem;
 }
 
 .aside{
     display: none;
-    width:60%;
-    background-color: #343EE9;
+    width:75%;
+    background-color: var(--color7);
     height:100vh;
     position:fixed;
     top:3rem;
@@ -141,12 +153,21 @@ main{
     }
 }
 
-.icon-arrow-right2{
+.icon-arrow-left2{
     transform: rotate(180deg);
     display: none;
     @media screen and (min-width:768px){
         display: block;
     }
+}
+
+.icon-cheveron-down,.icon-cheveron-up{
+    font-size:2rem;
+    color:var(--color1);
+}
+
+.icon-cheveron-up{
+    display: none;
 }
 
 article{
@@ -186,9 +207,9 @@ table{
 }
 
 thead tr th{
-    color:#8D8D8D;
+    color:var(--color8);
     padding-bottom:1rem;
-    border-bottom:3px solid #8D8D8D;
+    border-bottom:3px solid var(--color8);
 }
 
 th{
@@ -205,8 +226,8 @@ code{
 }
 
 footer{
-    background-color:#19405C;
-    color: #ffffff;
+    background-color:var(--color9);
+    color: var(--color1);
     height:14rem;
     text-align: center;
     @media screen and (min-width:768px){
@@ -227,16 +248,16 @@ footer{
         margin: 0;
         flex-basis:100%;
         height:auto;
-        background-color: #4D273A;
+        background-color: var(--color6)
     }
 }
 
 .banner{
-    background-color:#19405C;
+    background-color:var(--color9);
     height:100vh;
 
     & h1,& p{
-        color:#ffffff
+        color:var(--color1)
     }
 
     & h1{
@@ -264,7 +285,7 @@ footer{
 a.Descargar{
     width:96%;
     text-align: center;
-    background-color: #CD6799;
+    background-color: var(--color4);
     text-decoration:none;
     @media screen and (min-width:768px){
         width:250px;
@@ -274,7 +295,7 @@ a.Descargar{
 a.github{
     width:96%;
     text-align: center;
-    background-color: #000000;
+    background-color: var(--color10);
     text-decoration:none;
     @media screen and (min-width:768px){
         width:250px;
@@ -308,7 +329,7 @@ a.github{
     margin:0 0.9rem 0 0.5rem;
     padding-bottom:0;
     text-align:center;
-    color:#ffffff;
+    color:var(--color1);
     border:0;
     font-size:2rem;
     @media screen and (min-width:240px){
@@ -326,4 +347,24 @@ section{
 
 article{
     height:auto;
+}
+
+.submenu{
+    display: none;
+    flex-basis:100%;
+    background-color:var(--color5);
+    @media screen and (min-width:768px){
+        display: block;
+    }
+}
+
+.menu-items{
+    padding:0.5rem 0;
+    font-size:1.4rem;
+}
+
+.submenu-items{
+    font-size:1.2rem;
+    padding:0.3rem 0;
+    padding-left:1rem;
 }

@@ -1,13 +1,16 @@
-let versionPage = "V1.0.2";
+let versionPage = "V1.0.3";
 
 console.log("ArronaGrid Documentacion "+ versionPage);
 
 let btnMenuOpen = document.querySelector('.icon-menu');
-let btnMenuClose = document.querySelector('.icon-arrow-right2');
+let btnMenuClose = document.querySelector('.icon-arrow-left2');
 let aside = document.querySelector('.aside');
 let header = document.querySelector('header');
 let main = document.querySelector('main');
 let footer = document.querySelector('footer');
+let submenuOpen = document.querySelectorAll('.icon-cheveron-down');
+let submenuClose = document.querySelectorAll('.icon-cheveron-up');
+let submenu = document.querySelector('.submenu');
 
 const tablet = matchMedia('(min-width: 768px)');
 
@@ -62,3 +65,16 @@ btnMenuClose.addEventListener('click', e=>{
     tablet.addListener(menuClose);
     menuClose(tablet);
 });
+
+submenuOpen.addEventListener('click',subMenuOpen);
+
+function subMenuOpen() {
+    submenu.style.display = 'block';
+    for (let i = 0; i < submenuClose.length; i++) {
+        submenuClose[i].style.display = 'block';
+    }
+
+    for (let i = 0; i < submenuClose.length; i++) {
+        submenuOpen[i].style.display = 'none';
+    }
+}
