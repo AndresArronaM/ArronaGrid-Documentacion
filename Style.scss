@@ -161,13 +161,10 @@ main{
     }
 }
 
-.icon-cheveron-down,.icon-cheveron-up{
+.icon-cheveron-down{
     font-size:2rem;
     color:var(--color1);
-}
-
-.icon-cheveron-up{
-    display: none;
+    transition:0.4s;
 }
 
 article{
@@ -353,6 +350,7 @@ article{
     display: none;
     flex-basis:100%;
     background-color:var(--color5);
+    transition:max-height 0.2s ease-out;
     @media screen and (min-width:768px){
         display: block;
     }
@@ -367,4 +365,10 @@ article{
     font-size:1.2rem;
     padding:0.3rem 0;
     padding-left:1rem;
+}
+
+.menu{
+    li{
+        transform:10s;
+    }
 }

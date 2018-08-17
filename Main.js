@@ -8,9 +8,7 @@ let aside = document.querySelector('.aside');
 let header = document.querySelector('header');
 let main = document.querySelector('main');
 let footer = document.querySelector('footer');
-let submenuOpen = document.querySelectorAll('.icon-cheveron-down');
-let submenuClose = document.querySelectorAll('.icon-cheveron-up');
-let submenu = document.querySelector('.submenu');
+let submenuOpen = document.getElementsByClassName('icon-cheveron-down');
 
 const tablet = matchMedia('(min-width: 768px)');
 
@@ -66,15 +64,14 @@ btnMenuClose.addEventListener('click', e=>{
     menuClose(tablet);
 });
 
-submenuOpen.addEventListener('click',subMenuOpen);
-
-function subMenuOpen() {
-    submenu.style.display = 'block';
-    for (let i = 0; i < submenuClose.length; i++) {
-        submenuClose[i].style.display = 'block';
-    }
-
-    for (let i = 0; i < submenuClose.length; i++) {
-        submenuOpen[i].style.display = 'none';
-    }
+for (let i = 0; i < submenuOpen.length; i++) {
+    submenuOpen[i].addEventListener('click', e =>{
+        let submenu = submenuOpen[i].nextElementSibling;
+        if (submenu.style.display == "none"){
+            submenu.style.display = "block";
+        }else{
+            submenu.style.display = "none";
+        }
+    });
 }
+

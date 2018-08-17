@@ -10,9 +10,7 @@ var aside = document.querySelector('.aside');
 var header = document.querySelector('header');
 var main = document.querySelector('main');
 var footer = document.querySelector('footer');
-var submenuOpen = document.querySelectorAll('.icon-cheveron-down');
-var submenuClose = document.querySelectorAll('.icon-cheveron-up');
-var submenu = document.querySelector('.submenu');
+var submenuOpen = document.getElementsByClassName('icon-cheveron-down');
 
 var tablet = matchMedia('(min-width: 768px)');
 
@@ -68,16 +66,18 @@ btnMenuClose.addEventListener('click', function (e) {
     menuClose(tablet);
 });
 
-submenuOpen.addEventListener('click', subMenuOpen);
+var _loop = function _loop(i) {
+    submenuOpen[i].addEventListener('click', function (e) {
+        var submenu = submenuOpen[i].nextElementSibling;
+        if (submenu.style.display == "none") {
+            submenu.style.display = "block";
+        } else {
+            submenu.style.display = "none";
+        }
+    });
+};
 
-function subMenuOpen() {
-    submenu.style.display = 'block';
-    for (var i = 0; i < submenuClose.length; i++) {
-        submenuClose[i].style.display = 'block';
-    }
-
-    for (var _i = 0; _i < submenuClose.length; _i++) {
-        submenuOpen[_i].style.display = 'none';
-    }
+for (var i = 0; i < submenuOpen.length; i++) {
+    _loop(i);
 }
 //# sourceMappingURL=Main.js.map
