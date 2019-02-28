@@ -1,0 +1,136 @@
+.header{
+    @include ag-Container(Flex);
+    @include ag-Align(main,Justify);
+    @include ag-Align(cross,Center);
+    @include ag-Direccion(r);
+    @include ag-Wrap(nw);
+    --cont:3rem;
+    background-color:var(--Background);
+    box-shadow:var(--z-depht4);
+    height:var(--cont);
+    position:fixed;
+    top:0;
+    right:0;
+    max-width:100%;
+
+    @include MediaQuery(st){
+        --cont:3.5rem;
+    }
+
+    &-logo{
+        @include ag-Container(Flex);
+        @include ag-Align(main,Center);
+        @include ag-Align(cross,Center);
+        @include ag-Direccion(r);
+        @include ag-Wrap(nw);
+
+        @include MediaQuery(t){
+            @include ag-Align(main,Start);
+            @include ag-Align(cross,Center);
+        }
+
+        & img{
+            min-width:68px;
+            padding: 0 10px;
+        }
+
+        & h1{
+            font-size:var(--big);
+        }
+    }
+
+    &-menu{
+        @include ag-Container(Flex);
+        @include ag-Align(cross,Start);
+        @include ag-Direccion(r);
+        @include ag-Wrap(nw);
+        --cont:3rem;
+        background-color:var(--Background);
+        box-shadow:var(--z-depht3);
+        top:3.6rem;
+        display: none;
+        position:fixed;
+        width:150px;
+        height:100vh;
+        left:0;
+
+        @include MediaQuery(t){
+            @include ag-Container(Flex);
+            --cont:3.5rem;
+            height:100%;
+            position: static;
+            box-shadow:var(--z-depht0);
+        }
+
+        & ul{
+            @include ag-Layout(Flex);
+            @include ag-Align(cross,Start);
+            @include ag-Direccion(c);
+            @include ag-Wrap(w);
+            background-color:var(--Primary-Alt3);
+            width:100%;
+            height:100%;
+
+            @include MediaQuery(t){
+                @include ag-Direccion(r);
+                @include ag-Wrap(nw);
+            }
+        }
+
+        &-items{
+            @include ag-Container(Flex);
+            @include ag-Align(axis,Center);
+            @include ag-Direccion(c);
+            @include ag-Wrap(nw);
+            border-bottom:2px solid var(--Background);
+            padding:1rem 0;
+
+            @include MediaQuery(t){
+                border-bottom:0px;
+                border-right:1px solid var(--Background);
+
+                &:nth-child(5){
+                    border-right:0px;
+                }
+            }
+
+            @include MediaQuery(l){
+                border-right:2px solid var(--Background);
+            }
+
+            & a{
+                color:var(--Background);
+            }
+        }
+    }
+
+    &-btnMenu{
+        display: none;
+
+        &-label{
+            width:130px;
+            padding:0 10px;
+            border-right:1px solid var(--Primary);
+            @include MediaQuery(t){
+                display: none;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &-icon-menu{
+               height:60px;
+            }
+
+            &-icon-cross{
+                min-width:32px;
+                display: none;
+            }
+        }
+
+        &:checked ~ .header-menu{
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+include ../../Data/Documentacion
+nav
+    ul
+        each Menu in Doc
+            li
+                a(href=Menu.url)=Menu.title
+                    if Menu.child.length > 0
+                        ul
+                            each SubMenu in Menu.child
+                                li
+                                    a(href=SubMenu.url)=SubMenu.title

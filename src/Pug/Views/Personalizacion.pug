@@ -1,0 +1,40 @@
+-let title = "ArronaGrid - Personalizacion"
+-let type = "website"
+-let descripcion = "Libreria sass para la maquetacion de sitios web"
+-let url = "/Personalizacion.html"
+-let imagen = "/Img/ArronaGrid.svg"
+-let site_name = "ArronaGrid"
+-let locale = "es_MX"
+-let card = "summary_large_image"
+-let twitter = ""
+
+include ../Components/Metadatos
+body
+    include ../Components/Header
+    main.main-config
+        mixin Botones
+            div.btn-content
+                a.btn.btn-nav(href="Views/Configuracion.html")
+                    img.btn-nav-arrow(src="Img/Arrow_Left.svg", alt="")
+                    p.btn-nav-ocultar Anterior
+                a.btn.btn-nav(href="Views/Documentacion.html")
+                    img.btn-nav-home(src="Img/Home.svg", alt="")
+                    p.btn-nav-ocultar Volver al menu
+                a.btn.btn-nav(href="Views/Base.html")
+                    img.btn-nav-arrow(src="Img/Arrow_Right.svg", alt="")
+                    p.btn-nav-ocultar Siguiente
+        +Botones()
+        section
+            header
+                h2.main-config-title Personalizar ArronaGrid
+            p
+            |ArronaGrid cuenta con variables de configuracion que puede usted
+            |sobreescribirlas para las necesidades de su proyecto.Para hacerlo debera
+            |redefinirlas antes de importar esta libreria.
+            include:markdown-it ../../MD/Personalizacion/Personalizacion.md
+        section
+            header
+                h2.main-config-title Otras Variables que puedes personalizar
+            include:markdown-it ../../MD/Personalizacion/Otras_Variables.md
+        +Botones()
+    include ../Components/Footer

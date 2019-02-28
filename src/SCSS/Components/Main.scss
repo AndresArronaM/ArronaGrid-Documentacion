@@ -1,0 +1,33 @@
+.main{
+    &-home{
+        padding:var(--Separacion) 0px;
+    }
+
+    &-doc{
+        --Separacion-T:3.5rem;
+        --Separacion-B:1rem;
+        padding:var(--Separacion-T) var(--Separacion)var(--Separacion-B) var(--Separacion);
+        @include MediaQuery(st){
+            --Separacion-T:4.5rem;
+        }
+
+        & section{
+            margin:1rem 0;
+        }
+    }
+
+    &-config{
+        --Separacion-T:5rem;
+        --Separacion-B:1rem;
+        padding:var(--Separacion-T) var(--Separacion)var(--Separacion-B) var(--Separacion);
+        @include MediaQuery(st){
+            --Separacion-T:4.5rem;
+        }
+
+        &-title{
+            margin:0.5rem 0;
+            color:var(--Secundary-Alt2);
+            border-bottom:2px solid var(--Primary-Alt2);
+        }
+    }
+}

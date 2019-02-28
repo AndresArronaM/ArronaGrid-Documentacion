@@ -1,0 +1,61 @@
+*{
+    font-family:'Roboto', sans-serif;
+    font-size:var(--normal);
+}
+
+h1{
+    font-size:var(--biggest);
+}
+
+h2{
+    font-size:26px;
+    @include MediaQuery(st){
+        font-size:var(--bigger);
+    }
+}
+
+h3{
+    font-size:var(--big);
+}
+
+h4{
+    font-size:var(--medium);
+}
+
+h5{
+    font-size:var(--normal);
+}
+
+i{
+    font-size:var(--small);
+}
+
+h6{
+    font-size:14px;
+}
+
+h1,h2{
+    font-family:'Roboto-Bold',sans-serif;
+}
+
+h3,h4{
+    font-family:'Roboto-Black',sans-serif;
+}
+
+h5,h6{
+    font-family:'Roboto-Medium',sans-serif;
+}
+
+main{
+    --Separacion:1.5rem;
+    padding:var(--Separacion);
+}
+
+footer{
+    width:100%;
+    --Separacion:1rem;
+    padding:var(--Separacion);
+    background-color:var(--Primary-Alt3);
+    color:var(--Background);
+    text-align:center;
+}

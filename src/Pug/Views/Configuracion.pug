@@ -1,0 +1,75 @@
+-let title = "ArronaGrid - Documentacion"
+-let type = "website"
+-let descripcion = "Libreria sass para la maquetacion de sitios web"
+-let url = "/Documentacion.html"
+-let imagen = "/Img/ArronaGrid.svg"
+-let site_name = "ArronaGrid"
+-let locale = "es_MX"
+-let card = "summary_large_image"
+-let twitter = ""
+
+include ../Components/Metadatos
+body
+    include ../Components/Header
+    main.main-config
+        mixin Botones
+            div.btn-content
+                a.btn.btn-nav(href="Views/Documentacion.html")
+                    img.btn-nav-home(src="Img/Home.svg", alt="")
+                    p.btn-nav-ocultar Volver al menu
+                a.btn.btn-nav(href="Views/Personalizacion.html")
+                    img.btn-nav-arrow(src="Img/Arrow_Right.svg", alt="")
+                    p.btn-nav-ocultar Siguiente
+        +Botones()
+        section
+            header
+                h2.main-config-title Configuracion
+                div
+                    ul
+                        li Puede descargar o clonar ArronaGrid desde
+                            a(href="https://github.com/AndresArronaM/ArronaGrid/archive/master.zip") GitHub
+                        li Descomprima y busque el archivo
+                            include:markdown-it ../../MD/Configuracion/Tipo_de_Archivo.md
+            article#CSS
+                header
+                    h3.main-config-title Version CSS
+                include:markdown-it ../../MD/Configuracion/CSS.md
+            article#Sass
+                header
+                    h3.main-config-title Version Sass
+                div
+                    ul
+                        li O tambien puede instalar ArronaGrid desde NPM
+                            include:markdown-it ../../MD/Configuracion/NPM.md
+                section
+                    h4.main-config-title Compilacion mediante Prepros
+                div
+                    ul
+                        li Importe el archivo ArronaGrid.scss al archivo sass de su proyecto
+                            include:markdown-it ../../MD/Configuracion/Import.md
+
+                section
+                    h4.main-config-title Compilacion mediante Gulp.js
+                    div
+                        ul
+                            li Importe el archivo ArronaGrid.scss al archivo sass de su proyecto
+                                include:markdown-it ../../MD/Configuracion/Import-b.md
+                            li Para trabajar con ArronaGrid y la version 3 de gulp.js debera de instalar ests paquetes
+                                ul
+                                    li gulp
+                                    li gulp-sass
+                                    li gulp-postcss
+                                    li gulp-sourcemaps
+                                    li cssnano
+                                    li autoprefixer
+                                    li autoprefixer core
+                                    li node-sass-tilde-importer
+                            li Una vez instalados debera de crear el archivo gulpfile dependiendo de que version de gulp.js este usando
+                    div
+                        p Gulpfile para la Version 3
+                        a(href="") Ver archivo
+                        p Gulpfile para la Version 4
+                        a(href="") Ver archivo
+                    i Nota esta es una configuracion recomendada aunque usted puede crear y modificar estos archivo dependiendo de las nesesidades de su proyecto
+        +Botones()
+    include ../Components/Footer

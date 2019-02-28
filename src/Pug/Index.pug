@@ -1,0 +1,26 @@
+-let title = "ArronaGrid"
+-let type = "website"
+-let descripcion = "Libreria sass para la maquetacion de sitios web"
+-let url = "/Index.html"
+-let imagen = "/Img/ArronaGrid.svg"
+-let site_name = "ArronaGrid"
+-let locale = "es_MX"
+-let card = "summary_large_image"
+-let twitter = ""
+
+include Components/Metadatos
+body
+    include Components/Header
+    main.main-home
+        section.home-banner
+            header.home-banner-info
+                h1 ArronaGrid
+                h2 Libreria sass para la maquetacion de sitios web
+                p Version 0.1.5
+            article.home-banner-btn
+                a.btn(href="Views/Documentacion.html") Documentacion
+                a.btn(href="https://github.com/AndresArronaM/ArronaGrid/archive/master.zip") Descargar
+                a.btn(href="https://github.com/AndresArronaM/ArronaGrid") Github
+        section.home-caracteristicas
+            include Components/Caracteristicas
+    include Components/Footer

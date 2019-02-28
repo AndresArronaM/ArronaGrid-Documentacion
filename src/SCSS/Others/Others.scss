@@ -1,0 +1,104 @@
+.ag-Button{
+    @include ag-Button($Gap);
+    &-Radius{
+        @include ag-Radius;
+    }
+
+    &-xl{
+        @include ag-Button(6px);
+        height:50px;
+    }
+
+    &-x{
+        width:45%;
+        height:50px;
+    }
+
+    &-sm{
+        @include ag-Button(0);
+    }
+}
+
+.color{
+    background-color:var(--Secundary-Alt2);
+    color:var(--Background);
+}
+
+.ag-content{
+    @include ag-Container(Flex);
+    height:160px;
+    border:1px solid black;
+
+    &-grid{
+        @include ag-Container(Grid);
+        @include ag-Grid(3);
+
+        &-gap{
+            @include ag-Gap(12px,12px);
+        }
+    }
+
+    &-c{
+        @include ag-Direccion(c);
+    }
+
+    &-cr{
+        @include ag-Direccion(cr);
+    }
+
+    &-r{
+        @include ag-Direccion(r);
+    }
+
+    &-rr{
+        @include ag-Direccion(rr);
+    }
+
+    &-w{
+        @include ag-Wrap(w);
+    }
+
+    &-wr{
+        @include ag-Wrap(wr);
+    }
+
+    &-nw{
+        @include ag-Wrap(nw);
+    }
+
+    &-cs{
+        @include ag-Align(cross,Start);
+    }
+
+    &-cc{
+        @include ag-Align(cross,Center);
+    }
+
+    &-ce{
+        @include ag-Align(cross,End);
+    }
+
+    &-ms{
+        @include ag-Align(main,Start);
+    }
+
+    &-mc{
+        @include ag-Align(main,Center);
+    }
+
+    &-me{
+        @include ag-Align(main,End);
+    }
+
+    &-mj{
+        @include ag-Align(main,Justify);
+    }
+
+    &-md{
+        @include ag-Align(main,Distribute);
+    }
+
+    &-ac{
+        @include ag-Align(axis,Center);
+    }
+}

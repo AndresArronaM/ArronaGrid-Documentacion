@@ -1,0 +1,11 @@
+.body-doc{
+    @include MediaQuery(st){
+        height:100vh;
+        @include ag-Container(Flex);
+        @include ag-Direccion(c);
+        @include ag-Align(main,Justify);
+        @include ag-Align(cross,Center);
+        max-width:100%;
+        @include ag-Wrap(nw);
+    }
+}

@@ -1,0 +1,47 @@
+.btn{
+    @include ag-Button($Gap);
+    @include ag-Radius;
+    color:var(--Background);
+    border:2px solid var(--Background);
+
+    &-content{
+        width:100%;
+        margin:1rem 0;
+        @include ag-Container(Flex);
+        @include ag-Align(main,Justify);
+        @include ag-Align(cross,Center);
+    }
+
+    &-nav{
+        @include ag-Container(Flex);
+        @include ag-Align(axis,Center);
+        color:var(--Secundary);
+        border:2px solid var(--Secundary);
+        width:40px;
+        @include MediaQuery(st){
+            width:auto;
+        }
+
+        &:hover,&:active{
+            color:var(--Background);
+            background-color:var(--Secundary);
+        }
+
+        &-ocultar{
+            display: none;
+            @include MediaQuery(st){
+                display: block;
+                margin-left:5px;
+            }
+        }
+
+        &-arrow{
+            min-width:30px;
+            width:30px;
+        }
+
+        &-home{
+            min-width:30px;
+        }
+    }
+}

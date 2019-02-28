@@ -1,0 +1,21 @@
+```css
+*,*:before,*:after{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    text-size-adjust:100%;
+    overflow-y: auto;
+}
+
+img{
+    min-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+```

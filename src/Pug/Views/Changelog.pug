@@ -1,0 +1,16 @@
+-let title = "ArronaGrid - Changelog"
+-let type = "website"
+-let descripcion = "Libreria sass para la maquetacion de sitios web"
+-let url = "/Changelog.html"
+-let imagen = "/Img/ArronaGrid.svg"
+-let site_name = "ArronaGrid"
+-let locale = "es_MX"
+-let card = "summary_large_image"
+-let twitter = ""
+
+include ../Components/Metadatos
+body
+    include ../Components/Header
+    main.main-config
+        include:markdown-it ../../MD/Changelog.md
+    include ../Components/Footer

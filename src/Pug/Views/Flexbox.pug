@@ -1,0 +1,338 @@
+-let title = "ArronaGrid - Flexbox"
+-let type = "website"
+-let descripcion = "Libreria sass para la maquetacion de sitios web"
+-let url = "/Breackpoints.html"
+-let imagen = "/Img/ArronaGrid.svg"
+-let site_name = "ArronaGrid"
+-let locale = "es_MX"
+-let card = "summary_large_image"
+-let twitter = ""
+
+include ../Components/Metadatos
+body
+    include ../Components/Header
+    main.main-config
+        mixin Botones
+            div.btn-content
+                a.btn.btn-nav(href="Views/Button.html")
+                    img.btn-nav-arrow(src="Img/Arrow_Left.svg", alt="")
+                    p.btn-nav-ocultar Anterior
+                a.btn.btn-nav(href="Views/Documentacion.html")
+                    img.btn-nav-home(src="Img/Home.svg", alt="")
+                    p.btn-nav-ocultar Volver al menu
+                a.btn.btn-nav(href="Views/Grid.html")
+                    img.btn-nav-arrow(src="Img/Arrow_Right.svg", alt="")
+                    p.btn-nav-ocultar Siguiente
+        +Botones()
+        section
+            header
+                h2.main-config-title Flexbox
+            article
+                header
+                    h3.main-config-title Direccion
+                p Con ArronaGrid usted puede alinear sus elementos o su contenido ya sea de manera horizontal , de manea vertical  o de manera inversa segun el breackpoint
+                section
+                    header
+                        h4.main-config-title Column
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Direccion/Column/Column-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Direccion/Column/Column-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-c
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h4.main-config-title Column Reverse
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Direccion/Column-Reverse/Column-Reverse-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Direccion/Column-Reverse/Column-Reverse-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-cr
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h4.main-config-title Row
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Direccion/Row/Row-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Direccion/Row/Row-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-r
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h4.main-config-title Row Reverse
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Direccion/Row-Reverse/Row-Reverse-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Direccion/Row-Reverse/Row-Reverse-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-rr
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+            article
+                header
+                    h3.main-config-title Wrap
+                p Con ArronaGrid usted decide si sus elementos o su contenido quedan en una sola linea,inversa o en multiples lineas segun el breackpoint
+                section
+                    header
+                        h4.main-config-title Wrap
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Wrap/Wrap/Wrap-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Wrap/Wrap/Wrap-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-w
+                            div.ag-Button.ag-Button-x.color div1
+                            div.ag-Button.ag-Button-x.color div2
+                            div.ag-Button.ag-Button-x.color div3
+                section
+                    header
+                        h4.main-config-title Wrap Reverse
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Wrap/Wrap-Reverse/Wrap-Reverse-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Wrap/Wrap-Reverse/Wrap-Reverse-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-wr
+                            div.ag-Button.ag-Button-x.color div1
+                            div.ag-Button.ag-Button-x.color div2
+                            div.ag-Button.ag-Button-x.color div3
+                section
+                    header
+                        h4.main-config-title Nowrap
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Wrap/Nowrap/Nowrap-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Wrap/Nowrap/Nowrap-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-nw
+                            div.ag-Button.ag-Button-x.color div1
+                            div.ag-Button.ag-Button-x.color div2
+                            div.ag-Button.ag-Button-x.color div3
+            article
+                header
+                    h3.main-config-title Align
+                    p Con ArronaGrid usted puede centrar, distribuir o alinear sus elementos o su contenido segun el breackpoint
+                section
+                    header
+                        h4.main-config-title Alinear
+                section
+                    header
+                        h5.main-config-title Start
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Alinear/Start/Cross-Start-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Alinear/Start/Cross-Start-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-cs
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h5.main-config-title Center
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Alinear/Center/Cross-Center-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Alinear/Center/Cross-Center-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-cc
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h5.main-config-title End
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Alinear/End/Cross-End-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Alinear/End/Cross-End-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-ce
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h4.main-config-title Distribuir
+                section
+                    header
+                        h5.main-config-title Start
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Start/Main-Start-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Start/Main-Start-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-ms
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h5.main-config-title Center
+                    section
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Center/Main-Center-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Center/Main-Center-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-mc
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h5.main-config-title End
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/End/Main-End-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/End/Main-End-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-me
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h5.main-config-title Justify
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Justify/Main-Justify-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Justify/Main-Justify-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-mj
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h5.main-config-title Distribute
+                    section
+                        header
+                            h6.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Distribute/Main-Distribute-sass.md
+                    section
+                        header
+                            h6.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Distribuir/Distribute/Main-Distribute-css.md
+                    section
+                        header
+                            h6.main-config-title Ejemplo
+                        section.ag-content.ag-content-md
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+                section
+                    header
+                        h4.main-config-title Centrado Perfecto
+                    section
+                        header
+                            h5.main-config-title Version Sass
+                        include:markdown-it ../../MD/Flexbox/Align/Centrado-Perfecto/Axis-Center-sass.md
+                    section
+                        header
+                            h5.main-config-title Version css
+                        include:markdown-it ../../MD/Flexbox/Align/Centrado-Perfecto/Axis-Center-css.md
+                    section
+                        header
+                            h5.main-config-title Ejemplo
+                        section.ag-content.ag-content-ac
+                            div.ag-Button.ag-Button-xl.color div1
+                            div.ag-Button.ag-Button-xl.color div2
+                            div.ag-Button.ag-Button-xl.color div3
+        +Botones()
+    include ../Components/Footer

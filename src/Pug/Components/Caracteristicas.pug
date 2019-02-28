@@ -1,0 +1,8 @@
+include ../Data/Caracteristicas
+
+each Caracteristica in Caracteristicas
+    article.tarjeta.tarjeta-caracteristicas
+        header.tarjeta-title
+            h3=Caracteristica.title
+        img.tarjeta-img(src=Caracteristica.img)
+        p.tarjeta-text=Caracteristica.text

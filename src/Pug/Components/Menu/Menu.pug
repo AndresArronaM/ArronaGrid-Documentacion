@@ -1,0 +1,6 @@
+include ../../Data/Menu
+nav.header-menu
+    ul
+        each Menu in Main
+            li.header-menu-items
+                a(href=Menu.url)=Menu.title

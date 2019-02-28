@@ -1,0 +1,25 @@
+// Librerias
+@import "~@andresarronamontoya/arronagrid/ArronaGrid.scss";
+@import "~ux.andresarronamontoya/Guia-de-estilos.scss";
+@import "Librerias/iconfonts.scss";
+@import "Librerias/prism.scss";
+
+// Theme
+@import "Theme/Fonts.scss";
+
+// Base
+@import "Base/Base.scss";
+
+// Components
+@import "Components/Header.scss";
+@import "Components/Main.scss";
+@import "Components/Home.scss";
+@import "Components/Botones.scss";
+@import "Components/Tarjeta.scss";
+@import "Components/Footer.scss";
+
+// Hacks
+@import "Hacks/Hacks.scss";
+
+//Others
+@import "Others/Others.scss";

@@ -1,0 +1,34 @@
+.tarjeta{
+    @include ag-Container(Flex);
+    @include ag-Align(main,Justify);
+    @include ag-Align(cross,Center);
+    max-width:220px;
+    height:400px;
+    margin:1.5rem 0 0.75rem 0;
+    box-shadow:var(--z-depht2);
+
+    &-title{
+        @include ag-Container(Flex);
+        @include ag-Align(main,Justify);
+        @include ag-Align(cross,Center);
+        padding:var(--Separacion) 0 calc(var(--Separacion) / 2) 0;
+        width:100%;
+        height:120px;
+        & h3{
+            width:100%;
+            text-align: center;
+            color:var(--Primary-Alt2);
+        }
+    }
+
+    &-img{
+        height:140px;
+    }
+
+    &-text{
+        height:140px;
+        text-align:justify;
+        padding:var(--Separacion) calc(var(--Separacion) / 2) calc(var(--Separacion) / 2) calc(var(--Separacion) / 2);
+        color:var(--Secundary-Alt);
+    }
+}

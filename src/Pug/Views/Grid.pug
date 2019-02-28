@@ -1,0 +1,73 @@
+-let title = "ArronaGrid - Grid"
+-let type = "website"
+-let descripcion = "Libreria sass para la maquetacion de sitios web"
+-let url = "/Breackpoints.html"
+-let imagen = "/Img/ArronaGrid.svg"
+-let site_name = "ArronaGrid"
+-let locale = "es_MX"
+-let card = "summary_large_image"
+-let twitter = ""
+
+include ../Components/Metadatos
+body
+    include ../Components/Header
+    main.main-config
+        mixin Botones
+            div.btn-content
+                a.btn.btn-nav(href="Views/Flexbox.html")
+                    img.btn-nav-arrow(src="Img/Arrow_Left.svg", alt="")
+                    p.btn-nav-ocultar Anterior
+                a.btn.btn-nav(href="Views/Documentacion.html")
+                    img.btn-nav-home(src="Img/Home.svg", alt="")
+                    p.btn-nav-ocultar Volver al menu
+        +Botones()
+        section#Grid
+            header
+                h2.main-config-title Grid
+        article
+            p Mixin para la creacion de una cuadricula
+            i para cambiar el numero de columnas tendra que cambiar el valor en la variable $Column
+            section
+                header
+                    h3.main-config-title Version sass
+                include:markdown-it ../../MD/Grid/Grid-sass.md
+            section
+                header
+                    h3.main-config-title Version css
+                include:markdown-it ../../MD/Grid/Grid-css.md
+            section
+                header
+                    h3.main-config-title Ejemplo
+                section.ag-content-grid
+                    div.ag-Button-sm.color div 1
+                    div.ag-Button-sm.color div 2
+                    div.ag-Button-sm.color div 3
+                    div.ag-Button-sm.color div 4
+                    div.ag-Button-sm.color div 5
+                    div.ag-Button-sm.color div 6
+        section#Gap
+            header
+                h2.main-config-title Gap
+        article
+            p Separacion de los Grid-Elements
+            i para cambiar la separacion de los elementos tendra que cambiar el valor en la variable $Gap
+            section
+                header
+                    h3.main-config-title Version sass
+                include:markdown-it ../../MD/Grid/Gap-sass.md
+            section
+                header
+                    h3.main-config-title Version css
+                include:markdown-it ../../MD/Grid/Gap-css.md
+            section
+                header
+                    h3.main-config-title Ejemplo
+                section.ag-content-grid.ag-content-grid-gap
+                    div.ag-Button-sm.color div 1
+                    div.ag-Button-sm.color div 2
+                    div.ag-Button-sm.color div 3
+                    div.ag-Button-sm.color div 4
+                    div.ag-Button-sm.color div 5
+                    div.ag-Button-sm.color div 6
+        +Botones()
+    include ../Components/Footer
