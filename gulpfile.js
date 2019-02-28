@@ -132,17 +132,7 @@ gulp.task('scripts-build', ()=>{
         .pipe(server.stream({match: './Public/JavaScript/**/*.js'}))
 });
 
-gulp.task('sitemap',()=>{
-    return gulp.src('./Public/**/*.html',{
-        read:false
-    })
-        .pipe(sitemap({
-            siteUrl:''
-        }))
-        .pipe(gulp.dest('./public'))
-})
-
-gulp.task('build',gulp.parallel('index-build','pug-build','styles-build','scripts-build','sitemap'));
+gulp.task('build',gulp.parallel('index-build','pug-build','styles-build','scripts-build'));
 
 /// Modo Minificado
 gulp.task('styles-min',()=>{
